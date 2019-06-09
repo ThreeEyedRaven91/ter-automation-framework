@@ -44,3 +44,9 @@ npm install ter-automation-framework -g
 ```
 ter-automation-framework convert
 ```
+
+## User manual
+
+* [Quick start](/docs/quickstart.md)
+* [How to use module](/docs/how_to_use_module.md')
+* [Support matrix](/docs/support_matrix.md)

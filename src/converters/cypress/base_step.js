@@ -10,10 +10,15 @@ const click = ({ element }) => {
   return `cy.get('${element}').click();`;
 };
 
+const wait = ({ element }) => {
+  return `cy.wait('${element}');`;
+};
+
 const steps = {
   url,
   type,
   click,
+  wait,
 };
 
 export default steps;
