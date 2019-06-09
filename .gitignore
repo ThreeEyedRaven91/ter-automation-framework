@@ -1,4 +1,7 @@
+/.ter
 /dist
 /node_modules
+/test
 /yarn.lock
 /yarn-error.log
+.idea

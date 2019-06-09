@@ -1,15 +1,16 @@
 {
   "name": "ter-automation-framework",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-bin": "./node_modules/.bin/babel --presets=@babel/env,@babel/react --plugins=@babel/plugin-proposal-class-properties -d dist/bin/ src/bin",
     "build-helpers": "./node_modules/.bin/babel --presets=@babel/env,@babel/react --plugins=@babel/plugin-proposal-class-properties -d dist/helpers/ src/helpers",
-    "build-converters": "./node_modules/.bin/babel --presets=@babel/env,@babel/react --plugins=@babel/plugin-proposal-class-properties -d dist/converters/ src/converters",
+    "build-converters": "./node_modules/.bin/babel --presets=@babel/env,@babel/react --plugins=@babel/plugin-proposal-class-properties -d dist/converters/ src/converters --copy-files",
     "build": "yarn build-bin && yarn build-helpers && yarn build-converters",
-    "start-bin": "yarn build && node ./dist/bin/index.js"
+    "start-bin": "yarn build && node ./dist/bin/index.js",
+    "prepublish": "yarn build"
   },
   "bin": {
     "ter-automation-framework": "./dist/bin/index.js"
@@ -35,6 +36,8 @@
     "@babel/preset-react": "^7.0.0"
   },
   "dependencies": {
-    "argv": "^0.0.2"
+    "argv": "^0.0.2",
+    "dot": "^1.1.2",
+    "string-template": "^1.0.0"
   }
 }

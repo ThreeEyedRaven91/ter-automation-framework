@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import ConverterDetox from '../converters/detox';
 
-const convert = ({ inputPath, outputPath }) => {
+const convert = ({ inputPath, outputPath, modulePath, converter }) => {
   const cwd = process.cwd();
   const inputFilePath = path.join(cwd, inputPath);
   const outputFilePath = path.join(cwd, outputPath);
@@ -22,6 +21,8 @@ const convert = ({ inputPath, outputPath }) => {
         convert({
           inputPath: childInputPath,
           outputPath: childOutputPath,
+          modulePath,
+          converter,
         });
       }
     });
@@ -30,7 +31,10 @@ const convert = ({ inputPath, outputPath }) => {
     const inputString = fs.readFileSync(inputFilePath).toString();
     const input = JSON.parse(inputString);
 
-    const output = ConverterDetox.convertCase(input);
+    const output = converter.convertCase({
+      input,
+      modulePath,
+    });
 
     fs.writeFileSync(outputFilePath, output);
   }

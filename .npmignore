@@ -1,4 +1,6 @@
+/.ter
 /src
 /node_modules
+/test
 /yarn.lock
 /yarn-error.log
