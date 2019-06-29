@@ -1,0 +1,7 @@
+describe('{{=it.title}}', () => {
+  it('{{=it.title}}', async () => {
+    {{~it.convertedSteps :step}}
+    {{=step}}
+    {{~}}
+  });
+});

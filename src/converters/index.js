@@ -1,5 +1,5 @@
 import cypress from './cypress/index';
-import detox from './detox';
+import detox from './detox/index';
 
 const Converter = {
   cypress,

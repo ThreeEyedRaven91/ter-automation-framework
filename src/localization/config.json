@@ -1,0 +1,10 @@
+{
+  "storage_path": "src/localization",
+  "host": "localhost",
+  "port": "5050",
+  "languages": [
+    "en"
+  ],
+  "spreadsheet_id": "",
+  "sheet_id": ""
+}

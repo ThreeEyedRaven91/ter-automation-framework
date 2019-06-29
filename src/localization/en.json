@@ -1,0 +1,17 @@
+{
+  "general": {
+    "language_icon": "language_icon",
+    "loading": "loading"
+  },
+  "header": {
+    "logout": "logout"
+  },
+  "language": {
+    "en": "en",
+    "vn": "vn"
+  },
+  "side_menu": {
+    "module": "Module",
+    "test_case": "Test Case"
+  }
+}
